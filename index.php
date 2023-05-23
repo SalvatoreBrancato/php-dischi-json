@@ -12,8 +12,15 @@
 <body>
 
     <div id="app">
-        <div class="vh-100 bg-body-secondary">
-
+        <div class="vh-100 w-75 mx-auto bg-secondary d-flex justify-content-around align-items-center flex-wrap">
+            <div v-for="(element, index) in data" :key="index" class="card col-3 m-1">
+                <img :src="element.poster" class="card-img-top" alt="Immagine copertina">
+                <div class="card-body d-flex flex-column">
+                    <span class="card-title text-center fs-5 lh-1">{{element.title}}</span>
+                    <span class="card-text text-center fs-5 lh-1">{{element.author}}</span>
+                    <span class="card-text text-center fs-5 lh-1">{{element.year}}</span>   
+                </div>
+            </div>
         </div>
     </div>
     
